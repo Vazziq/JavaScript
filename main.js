@@ -3,9 +3,7 @@ console.log('Hello World');
 var a = 2;
 var b = 2;
 
-if (a !== 1) {
-    console.log('dziala');
-} 
-else {
-    console.log('wynik else')
-}
+let zwierzeta = ['kot', 'pies', 'kon', 2, 6, 12, 42];
+zwierzeta[zwierzeta.length -1] = 'liczba';
+
+console.log(zwierzeta);
