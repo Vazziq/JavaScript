@@ -54,10 +54,26 @@ let osoby = [
     {imie:'Brad',nazwisko:'Pitt',wiek:55},
     {imie:'Tom',nazwisko:'Hanks',wiek:62},
 ]
-/*for (let i = 0; i < osoby.length; i++){
+for (let i = 0; i < osoby.length; i++){
     console.log(i, osoby[i].imie );
 }
-*/
-osoby.forEach(function(x){
+/* osoby.forEach(function(x){
     console.log(x.imie);
 })
+*/
+/*
+let wynik = osoby.filter(function(osoba){
+    return osoba.wiek > 60;
+})
+    console.log(wynik);
+*/
+/*
+let wynik = osoby.map(function(osoba){
+    return osoba.wiek;
+})
+    console.log(wynik);
+*/
+let wynik = osoby.reduce(function(total, osoba){
+    return total + osoba.wiek;
+}, 0);
+    console.log(wynik);
