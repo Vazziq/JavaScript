@@ -83,9 +83,24 @@ let wynik = osoby.reduce(function(total, osoba){
     console.log(wynik);
 */
 
+window.addEventListener('load', function(evt){
+
 const header = document.querySelector('#naszheader');
+/*
 const headerChildrenArray = Array.from(header.children);
 
 for (let i = 0; i < headerChildrenArray.length; i++) {
     console.log(headerChildrenArray[i]);
 }
+*/
+const przycisk = document.createElement('button');
+const text = document.createTextNode('Kliknij Tutaj');
+
+    przycisk.appendChild(text);
+    header.appendChild(przycisk);
+
+header.addEventListener('click', function(evt){
+    console.log(evt);
+    //console.log(evt.target);
+})
+})
