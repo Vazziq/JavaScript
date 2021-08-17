@@ -49,6 +49,7 @@ let dodaj = (function(x, y) {
     console.log(wynik);
 })(3,9)
 */
+/*
 let osoby = [
     {imie:'Johnny',nazwisko:'Deep',wiek:55},
     {imie:'Brad',nazwisko:'Pitt',wiek:55},
@@ -57,6 +58,7 @@ let osoby = [
 for (let i = 0; i < osoby.length; i++){
     console.log(i, osoby[i].imie );
 }
+*/
 /* osoby.forEach(function(x){
     console.log(x.imie);
 })
@@ -73,7 +75,17 @@ let wynik = osoby.map(function(osoba){
 })
     console.log(wynik);
 */
+
+/*
 let wynik = osoby.reduce(function(total, osoba){
     return total + osoba.wiek;
 }, 0);
     console.log(wynik);
+*/
+
+const header = document.querySelector('#naszheader');
+const headerChildrenArray = Array.from(header.children);
+
+for (let i = 0; i < headerChildrenArray.length; i++) {
+    console.log(headerChildrenArray[i]);
+}
