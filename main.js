@@ -107,15 +107,56 @@ header.addEventListener('click', function(evt){
 })
 */
 
-window.addEventListener('load', function(evt){
-    const formularze = document.forms['imie'];
-    console.log(formularze);
+// window.addEventListener('load', function(evt){
+//     const formularze = document.forms['imie'];
+//     console.log(formularze);
 
-    formularze.addEventListener('submit', function(evt){
-        evt.preventDefault();
-        const imie = formularze.querySelector('input[type="tekst"]').value;
-        console.log(imie);
-        alert(imie);
+//     formularze.addEventListener('submit', function(evt){
+//         evt.preventDefault();
+//         const imie = formularze.querySelector('input[type="tekst"]').value;
+//         console.log(imie);
+//         alert(imie);
 
-    });
-});
+//     });
+// });
+
+// const naszaData = Date.now();
+
+//     console.log(naszaData);
+
+// const naszaData2 = Date.now();
+
+//     console.log(naszaData2);
+
+// console.log(naszaData - naszaData2);
+
+// setTimeout(function(){
+
+//     console.log('Witam');
+// }, 3000);
+
+// let licznik = 0;
+// let naszInterwal = setInterval(doKonsoli, 1000)
+
+//     function doKonsoli(){
+//         licznik++;
+//         console.log("ASD " + licznik);
+//         if (licznik > 9) {
+//             clearInterval(naszInterwal);
+//         }
+// }
+
+class Osoba {
+
+    constructor(_imie){
+        this.imie = _imie;
+    }
+    przywitajSie(pozdrowienie){
+        console.log(pozdrowienie + ", jestem " + this.imie);
+    }
+}
+let ja = new Osoba('Krystian');
+ja.przywitajSie('Siemanko');
+
+let ty = new Osoba('Karol');
+ty.przywitajSie("Elo");
