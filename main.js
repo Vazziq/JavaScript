@@ -146,17 +146,41 @@ header.addEventListener('click', function(evt){
 //         }
 // }
 
-class Osoba {
+// class Osoba {
 
-    constructor(_imie){
-        this.imie = _imie;
-    }
-    przywitajSie(pozdrowienie){
-        console.log(pozdrowienie + ", jestem " + this.imie);
-    }
-}
-let ja = new Osoba('Krystian');
-ja.przywitajSie('Siemanko');
+//     constructor(_imie){
+//         this.imie = _imie;
+//     }
+//     przywitajSie(pozdrowienie){
+//         console.log(pozdrowienie + ", jestem " + this.imie);
+//     }
+// }
+// let ja = new Osoba('Krystian');
+// ja.przywitajSie('Siemanko');
 
-let ty = new Osoba('Karol');
-ty.przywitajSie("Elo");
+// let ty = new Osoba('Karol');
+// ty.przywitajSie("Elo");
+
+// let can = document.getElementById('naszCanvas');
+
+// let ctx = can.getContext('2d');
+
+// ctx.beginPath();
+// ctx.moveTo(20, 20);
+// ctx.lineTo(150, 80);
+// ctx.stroke();
+
+// ctx.font = "36px Arial";
+// ctx.strokeText("Siema", 100, 100);
+
+let zapamietaneImie = localStorage.getItem('imie');
+    console.log(zapamietaneImie);
+
+let przycisk = document.getElementById('zatwierdz');
+    
+    przycisk.addEventListener('click', function(evt){
+        evt.preventDefault();
+        let imie = document.getElementById('inputImie').value;
+        console.log(imie);
+        localStorage.setItem('imie', imie);
+    })
