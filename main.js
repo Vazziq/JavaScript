@@ -83,8 +83,8 @@ let wynik = osoby.reduce(function(total, osoba){
     console.log(wynik);
 */
 
-window.addEventListener('load', function(evt){
-
+//window.addEventListener('load', function(evt){
+/*
 const header = document.querySelector('#naszheader');
 /*
 const headerChildrenArray = Array.from(header.children);
@@ -93,6 +93,7 @@ for (let i = 0; i < headerChildrenArray.length; i++) {
     console.log(headerChildrenArray[i]);
 }
 */
+/*
 const przycisk = document.createElement('button');
 const text = document.createTextNode('Kliknij Tutaj');
 
@@ -104,3 +105,17 @@ header.addEventListener('click', function(evt){
     //console.log(evt.target);
 })
 })
+*/
+
+window.addEventListener('load', function(evt){
+    const formularze = document.forms['imie'];
+    console.log(formularze);
+
+    formularze.addEventListener('submit', function(evt){
+        evt.preventDefault();
+        const imie = formularze.querySelector('input[type="tekst"]').value;
+        console.log(imie);
+        alert(imie);
+
+    });
+});
