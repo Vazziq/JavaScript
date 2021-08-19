@@ -185,3 +185,4 @@ let przycisk = document.getElementById('zatwierdz');
         console.log(imie);
         localStorage.setItem('imie', imie);
     })
+    
