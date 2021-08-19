@@ -175,6 +175,7 @@ header.addEventListener('click', function(evt){
 
 let zapamietaneImie = localStorage.getItem('imie');
     console.log(zapamietaneImie);
+    alert(zapamietaneImie);
 
 let przycisk = document.getElementById('zatwierdz');
     

@@ -3,3 +3,9 @@
     height: 200px;
     border: 1px solid black;
 }
+.alert {
+    text-align: center;
+}
+section {
+    text-align: center;
+}
