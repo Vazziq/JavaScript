@@ -21,4 +21,17 @@
             <div class="kubek" ></div>
         </section>
 </body>
+<script>
+    function kubekKlik(evt){
+        console.log('Klikniety');
+        }
+    let kubki = document.querySelectorAll('.kubek');
+        kubki.forEach( kubek => {
+            kubek.addEventListener('click', kubekKlik)
+        })
+
+
+
+        console.log(kubki);
+</script>
 </html>
