@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="PL-pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,28 +11,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <h1>Napełnianie kubeczków</h1>
-        <section class="tabela">
-            <div class="kubek" ></div>
-            <div class="kubek" ></div>
-            <div class="kubek" ></div>
-            <div class="kubek" ></div>
-            <div class="kubek" ></div>
-            <div class="kubek" ></div>
-        </section>
+    <section class="tabela">
+        <div class="kubek zolta" poziom="0"></div>
+        <div class="kubek zielona" poziom="0"></div>
+        <div class="kubek niebieska" poziom="0"></div>
+        <div class="kubek czerwona" poziom="0"></div>
+        <div class="kubek fioletowa" poziom="0"></div>
+        <div class="kubek czarna" poziom="0"></div>
+    </section>
 </body>
 <script>
-    function kubekKlik(evt){
-        console.log('Klikniety');
+    function kubekKlik(evt) {
+        let poziom = Number(this.getAttribute('poziom'));
+        poziom += 16;
+        if (poziom <= 99) {
+            this.style.backgroundPosition = "0 " + poziom + "%";
+            this.setAttribute('poziom', poziom);
+        } else {
+            this.style.cursor = "not-allowed";
         }
+        
+    }
     let kubki = document.querySelectorAll('.kubek');
-        kubki.forEach( kubek => {
-            kubek.addEventListener('click', kubekKlik)
-        })
+    kubki.forEach(kubek => {
+        kubek.addEventListener('click', kubekKlik)
+    });
 
-
-
-        console.log(kubki);
 </script>
+
 </html>
